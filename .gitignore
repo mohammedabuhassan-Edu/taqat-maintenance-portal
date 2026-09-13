@@ -21,3 +21,6 @@ supabase/.env
 .DS_Store
 Thumbs.db
 *.log
+
+# TypeScript incremental build cache
+*.tsbuildinfo
