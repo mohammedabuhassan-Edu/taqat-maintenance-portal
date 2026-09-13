@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build output
+web/dist/
+web/coverage/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# supabase local
+supabase/.branches/
+supabase/.temp/
+supabase/.env
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
