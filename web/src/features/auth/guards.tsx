@@ -108,18 +108,3 @@ export function RedirectIfAuthed() {
   }
   return <Outlet />
 }
-
-/** Root path: send user to the right area. */
-export function HomeRedirect() {
-  const { session, profile } = useAuth()
-  if (session === undefined) {
-    return (
-      <FullPage>
-        <Spinner />
-      </FullPage>
-    )
-  }
-  if (!session) return <Navigate to="/login" replace />
-  if (!profile) return <Navigate to="/app" replace />
-  return <Navigate to={profile.role === 'admin' ? '/admin' : '/app'} replace />
-}

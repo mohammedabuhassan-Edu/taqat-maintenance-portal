@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router'
-import { RequireAuth, RequireAdmin, RedirectIfAuthed, HomeRedirect } from '@/features/auth/guards'
+import { RequireAuth, RequireAdmin, RedirectIfAuthed } from '@/features/auth/guards'
+import { LandingPage } from '@/features/landing/LandingPage'
 import { AuthLayout } from '@/features/auth/AuthLayout'
 import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
@@ -32,7 +33,7 @@ export function App() {
   return (
     <Suspense fallback={<Spinner className="min-h-[50vh] items-center" />}>
       <Routes>
-        <Route index element={<HomeRedirect />} />
+        <Route index element={<LandingPage />} />
 
         <Route element={<AuthLayout />}>
           <Route element={<RedirectIfAuthed />}>

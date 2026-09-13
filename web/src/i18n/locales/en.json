@@ -4,6 +4,62 @@
     "tagline": "Maintenance & building management",
     "credit": "Made by Mohammed AbuHassan for the Taqat AI Coding sessions"
   },
+  "landing": {
+    "signIn": "Resident sign in",
+    "openDashboard": "Open my dashboard",
+    "badge": "For residents and building management",
+    "heroTitle": "Building maintenance, handled in one place",
+    "heroSubtitle": "Report an issue in your apartment, follow its progress, and stay up to date with building news and fees — from any device, in English or Arabic.",
+    "heroPrimary": "Sign in to your account",
+    "heroSecondary": "See how it works",
+    "inviteNote": "Access is by invitation. Ask the building administration if you have not received your invite.",
+    "featuresTitle": "Everything a building needs",
+    "featuresSubtitle": "A simple portal that keeps residents and management on the same page.",
+    "features": {
+      "requests": {
+        "title": "Maintenance requests",
+        "desc": "Describe the problem, add photos, set the urgency, and submit in under a minute."
+      },
+      "tracking": {
+        "title": "Live status tracking",
+        "desc": "Follow every request from new to done, and chat with management right on the request."
+      },
+      "announcements": {
+        "title": "Building announcements",
+        "desc": "Never miss a water cut-off, elevator service, or meeting — notices reach every resident."
+      },
+      "fees": {
+        "title": "Fees at a glance",
+        "desc": "See what is due, what has been paid, and when — no more chasing paper receipts."
+      },
+      "admin": {
+        "title": "Management dashboard",
+        "desc": "Administrators triage requests, manage apartments and residents, and keep private notes."
+      },
+      "bilingual": {
+        "title": "English & Arabic",
+        "desc": "Fully bilingual with right-to-left layout, so every resident feels at home."
+      }
+    },
+    "stepsTitle": "How it works",
+    "steps": {
+      "one": {
+        "title": "Get invited",
+        "desc": "The building administration sends you an invitation email and links you to your apartment."
+      },
+      "two": {
+        "title": "Report an issue",
+        "desc": "Sign in, describe the problem, attach photos, and pick how urgent it is."
+      },
+      "three": {
+        "title": "Track it to done",
+        "desc": "Watch the status change, exchange comments, and get notified when it is resolved."
+      }
+    },
+    "ctaTitle": "Ready to get started?",
+    "ctaSubtitle": "Sign in with the email you were invited with.",
+    "footerRights": "Building Portal"
+  },
   "common": {
     "loading": "Loading…",
     "save": "Save",
