@@ -1,7 +1,8 @@
 {
   "app": {
     "name": "Building Portal",
-    "tagline": "Maintenance & building management"
+    "tagline": "Maintenance & building management",
+    "credit": "Made by Mohammed AbuHassan for the Taqat AI Coding sessions"
   },
   "common": {
     "loading": "Loading…",

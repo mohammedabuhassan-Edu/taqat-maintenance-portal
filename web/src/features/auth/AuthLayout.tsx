@@ -14,11 +14,12 @@ export function AuthLayout() {
         </div>
         <LanguageSwitcher />
       </header>
-      <main className="flex flex-1 items-center justify-center px-4 pb-16">
+      <main className="flex flex-1 items-center justify-center px-4 pb-8">
         <div className="w-full max-w-md rounded-2xl border bg-white p-8 shadow-sm">
           <Outlet />
         </div>
       </main>
+      <footer className="px-6 pb-6 text-center text-xs text-slate-500">{t('app.credit')}</footer>
     </div>
   )
 }

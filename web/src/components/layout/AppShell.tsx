@@ -161,6 +161,7 @@ export function AppShell({ area }: { area: 'tenant' | 'admin' }) {
             <Outlet />
           </div>
         </main>
+        <footer className="border-t px-4 py-3 text-center text-xs text-slate-400 lg:px-8">{t('app.credit')}</footer>
       </div>
     </div>
   )

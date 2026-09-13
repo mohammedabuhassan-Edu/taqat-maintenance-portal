@@ -2,6 +2,8 @@
   "name": "taqat-maintenance-portal",
   "private": true,
   "version": "0.1.0",
+  "description": "Apartment maintenance portal for residents and building management. Made by Mohammed AbuHassan for the Taqat AI Coding sessions.",
+  "author": "Mohammed AbuHassan",
   "type": "module",
   "scripts": {
     "dev": "vite",
