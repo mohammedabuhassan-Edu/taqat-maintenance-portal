@@ -44,16 +44,20 @@ export function Button({
   children,
   ...props
 }: ButtonProps) {
-  const Comp = asChild ? Slot : 'button'
+  const classes = cn(buttonVariants({ variant, size, className }))
+  if (asChild) {
+    // Slot requires exactly one child element; the loader is not supported here.
+    return (
+      <Slot className={classes} {...props}>
+        {children}
+      </Slot>
+    )
+  }
   return (
-    <Comp
-      className={cn(buttonVariants({ variant, size, className }))}
-      disabled={disabled || loading}
-      {...props}
-    >
+    <button className={classes} disabled={disabled || loading} {...props}>
       {loading ? <Loader2 className="animate-spin" aria-hidden /> : null}
       {children}
-    </Comp>
+    </button>
   )
 }
 
