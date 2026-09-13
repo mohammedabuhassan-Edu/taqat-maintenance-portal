@@ -187,12 +187,13 @@ create trigger on_auth_user_email_changed
   for each row execute function public.handle_user_email_change();
 
 -- Tenants may only edit a limited set of their own profile columns.
+-- auth.uid() is null for the service role / SQL editor, which bypass RLS anyway.
 create or replace function public.protect_profile_columns()
 returns trigger
 language plpgsql
 as $$
 begin
-  if public.is_admin() then
+  if auth.uid() is null or public.is_admin() then
     return new;
   end if;
   if new.role is distinct from old.role
@@ -224,7 +225,7 @@ begin
     new.resolved_at := null;
   end if;
 
-  if not public.is_admin() then
+  if auth.uid() is not null and not public.is_admin() then
     -- Tenants can only touch requests that are still new...
     if old.status <> 'new' then
       raise exception 'insufficient_privilege' using errcode = '42501';
