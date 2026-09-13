@@ -6,6 +6,8 @@ import ar from './locales/ar.json'
 
 export const SUPPORTED_LANGS = ['en', 'ar'] as const
 export type Lang = (typeof SUPPORTED_LANGS)[number]
+/** Language shown to first-time visitors who have not picked one yet. */
+export const DEFAULT_LANG: Lang = 'ar'
 
 export function isLang(v: unknown): v is Lang {
   return typeof v === 'string' && (SUPPORTED_LANGS as readonly string[]).includes(v)
@@ -29,19 +31,21 @@ void i18n
       en: { translation: en },
       ar: { translation: ar },
     },
-    fallbackLng: 'en',
+    fallbackLng: DEFAULT_LANG,
     supportedLngs: SUPPORTED_LANGS,
     load: 'languageOnly',
     nonExplicitSupportedLngs: true,
     interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage', 'navigator'],
+      // Only an explicit choice (persisted in localStorage) overrides the default;
+      // the browser language is deliberately ignored.
+      order: ['localStorage'],
       caches: ['localStorage'],
       lookupLocalStorage: 'portal.lang',
     },
   })
 
-applyDocumentLang(i18n.resolvedLanguage ?? 'en')
+applyDocumentLang(i18n.resolvedLanguage ?? DEFAULT_LANG)
 i18n.on('languageChanged', applyDocumentLang)
 
 export default i18n

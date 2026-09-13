@@ -16,7 +16,7 @@ import { Badge } from '@/components/ui/badge'
 import { EmptyState, ErrorBanner, PageHeader, Spinner } from '@/components/ui/misc'
 import { describeError } from '@/lib/errors'
 import { tv } from '@/lib/forms'
-import { SUPPORTED_LANGS } from '@/i18n'
+import { DEFAULT_LANG, SUPPORTED_LANGS } from '@/i18n'
 import type { Profile } from '@/lib/database.types'
 
 const inviteSchema = z.object({
@@ -39,7 +39,7 @@ export function InviteTenantDialog({ open, onOpenChange, defaultApartmentId }: {
       email: '',
       phone: '',
       apartment_id: defaultApartmentId ?? '',
-      preferred_lang: (i18n.resolvedLanguage as 'en' | 'ar') ?? 'en',
+      preferred_lang: (i18n.resolvedLanguage as 'en' | 'ar') ?? DEFAULT_LANG,
     },
     resetOptions: { keepDirtyValues: true },
   })
@@ -122,7 +122,7 @@ function EditTenantDialog({ tenant, onOpenChange }: { tenant: Profile | null; on
       full_name: tenant?.full_name ?? '',
       phone: tenant?.phone ?? '',
       apartment_id: tenant?.apartment_id ?? '',
-      preferred_lang: tenant?.preferred_lang ?? 'en',
+      preferred_lang: tenant?.preferred_lang ?? DEFAULT_LANG,
     },
   })
 
