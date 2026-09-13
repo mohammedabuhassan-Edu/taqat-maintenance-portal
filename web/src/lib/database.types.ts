@@ -34,6 +34,7 @@ export type Profile = {
   apartment_id: string | null
   preferred_lang: 'en' | 'ar'
   is_active: boolean
+  is_demo: boolean
   email: string | null
   created_at: string
 }
@@ -143,6 +144,7 @@ export type Database = {
           apartment_id?: string | null
           preferred_lang?: 'en' | 'ar'
           is_active?: boolean
+          is_demo?: boolean
           email?: string | null
           created_at?: string
         }
@@ -154,6 +156,7 @@ export type Database = {
           apartment_id?: string | null
           preferred_lang?: 'en' | 'ar'
           is_active?: boolean
+          is_demo?: boolean
           email?: string | null
           created_at?: string
         }

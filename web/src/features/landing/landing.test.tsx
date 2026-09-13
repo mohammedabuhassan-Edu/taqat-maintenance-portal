@@ -26,6 +26,7 @@ const adminProfile: Profile = {
   apartment_id: null,
   preferred_lang: 'en',
   is_active: true,
+  is_demo: false,
   email: 'a@example.com',
   created_at: new Date().toISOString(),
 }

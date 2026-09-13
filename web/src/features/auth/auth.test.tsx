@@ -45,6 +45,7 @@ const tenantProfile: Profile = {
   apartment_id: 'a1',
   preferred_lang: 'en',
   is_active: true,
+  is_demo: false,
   email: 't@example.com',
   created_at: new Date().toISOString(),
 }
